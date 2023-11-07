@@ -1,9 +1,18 @@
+import { useState } from "react";
+
 import WeatherCard from "./components/WeatherCard/WeatherCard";
+import WhereAreYou from "./components/WhereAreYou/WhereAreYou";
+import Geocode from "./components/reverseGeocoding";
 
 function App() {
+  const [location, setLocation] = useState(["40.73", "-73.93"]);
+  const [cityName, setCityName] = useState("");
+
   return (
     <div className="App">
-      <WeatherCard />
+      <WhereAreYou setCoords={setLocation} />
+      <WeatherCard coords={location} curCity={cityName} />
+      <Geocode coords={location} setCity={setCityName} />
     </div>
   );
 }
