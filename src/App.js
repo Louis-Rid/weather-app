@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./index.css";
 
 import WeatherCard from "./components/WeatherCard/WeatherCard";
 import WhereAreYou from "./components/WhereAreYou/WhereAreYou";
@@ -9,7 +10,7 @@ function App() {
   const [cityName, setCityName] = useState("");
 
   return (
-    <div className="App">
+    <div className="app">
       <WhereAreYou setCoords={setLocation} />
       <WeatherCard coords={location} curCity={cityName} />
       <Geocode coords={location} setCity={setCityName} />

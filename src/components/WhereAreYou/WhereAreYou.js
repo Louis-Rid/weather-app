@@ -1,3 +1,5 @@
+import "./whereAreYou.css";
+
 function WhereAreYou({ setCoords }) {
   function geoFindMe(e) {
     const success = (position) => {
@@ -13,19 +15,10 @@ function WhereAreYou({ setCoords }) {
     navigator.geolocation.getCurrentPosition(success, error);
   }
 
-  function handleSubmit(e) {
-    e.preventDefault();
-  }
-
   return (
-    <div>
-      <h2>Where Are You</h2>
+    <div className="way--container">
+      <h2>Where Are You?</h2>
       <button onClick={geoFindMe}>Use my location</button>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="location">Location</label>
-        <input id="location" />
-        <input type="submit" />
-      </form>
     </div>
   );
 }
