@@ -1,7 +1,18 @@
 import { useEffect, useState } from "react";
+import WeeklyTempItem from "../WeeklyTempItem/WeeklyTempItem";
+import "./weeklyTemp.css";
 
 function WeeklyTemp({ data }) {
   const [weekTemp, setWeekTemp] = useState([]);
+
+  const weatherList = weekTemp.map((dayData, index) => (
+    <WeeklyTempItem
+      max={dayData[0]}
+      min={dayData[1]}
+      day={dayData[2]}
+      key={index}
+    />
+  ));
 
   // Updates weather for the week
   useEffect(() => {
@@ -19,12 +30,7 @@ function WeeklyTemp({ data }) {
     }
   }, [data]);
 
-  return (
-    <div>
-      <h2>Weekly Temp</h2>
-      {weekTemp.map((day) => `${day[2]} ${day[0]}°/${day[1]}° `)}
-    </div>
-  );
+  return <div className="wt--container">{weatherList}</div>;
 }
 
 export default WeeklyTemp;

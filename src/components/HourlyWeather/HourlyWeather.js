@@ -17,15 +17,13 @@ function HourlyWeather({ data }) {
 
       for (let i = 0; i < 24; i++) {
         let cur = hourlyArr[i];
-        let timestamp = new Date(cur.dt * 1000);
-        let time = new Date(timestamp.getTime());
-        let timeString = time.toLocaleTimeString([], {
-          hour: "2-digit",
-          minute: "2-digit",
-        });
+        let date = new Date(cur.dt * 1000);
+        let hours =
+          date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
+        let time = hours + ":00";
         let temp = Math.round(cur.temp);
 
-        setHourlyTemp((prev) => [...prev, [timeString, temp]]);
+        setHourlyTemp((prev) => [...prev, [time, temp]]);
       }
     }
   }, [data]);

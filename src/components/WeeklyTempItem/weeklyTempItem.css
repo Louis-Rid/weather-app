@@ -1,0 +1,17 @@
+.wti--container {
+  display: flex;
+  font-size: 20px;
+  justify-content: space-between;
+  color: #f5f5f5;
+  padding: 10px;
+  border-bottom: 1px solid #f5f5f521;
+  font-weight: 300;
+}
+
+.wti--max {
+  font-weight: 500;
+}
+
+.wti--min {
+  color: #f5f5f581;
+}

@@ -15,7 +15,7 @@ function CurrentWeather({ coords, curCity, data }) {
     <div className="cw--container">
       <div>
         {/* <h2>Current Temp</h2> */}
-        <p className="cw--temp">{curTemp}</p>
+        <p className="cw--temp">{curTemp}˚</p>
         <p className="cw--city">{curCity}</p>
       </div>
     </div>
