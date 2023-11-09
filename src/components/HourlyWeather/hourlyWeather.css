@@ -1,0 +1,15 @@
+.hw--container {
+  margin: 20px;
+  background-color: #5a576687;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.hw--innerContainer {
+  display: flex;
+  overflow: auto;
+}
+
+.hw--innerContainer::-webkit-scrollbar {
+  display: none;
+}

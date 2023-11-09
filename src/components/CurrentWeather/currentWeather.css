@@ -1,0 +1,16 @@
+.cw--container p {
+  margin: 0;
+  text-align: center;
+  color: #f5f5f5;
+}
+
+.cw--temp {
+  font-size: 50px;
+  font-weight: 300;
+}
+
+.cw--city {
+  margin: 0;
+  text-align: center;
+  font-weight: 200;
+}

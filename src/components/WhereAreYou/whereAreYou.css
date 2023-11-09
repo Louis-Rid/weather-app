@@ -1,0 +1,23 @@
+.way--container {
+  display: flex;
+}
+
+.way--container button {
+  background-color: #e2dbbe;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.way--container button:hover {
+  transform: scale(1.025);
+}
+
+.way--container h2 {
+  margin: 0;
+  color: #f5f5f5;
+}

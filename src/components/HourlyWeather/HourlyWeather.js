@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
+import HourlyWeatherItem from "../HourlyWeatherItem/HourlyWeatherItem";
+import "./hourlyWeather.css";
 
 function HourlyWeather({ data }) {
   const [hourlyTemp, setHourlyTemp] = useState([]);
+
+  const weatherList = hourlyTemp.map((hour, index) => {
+    return <HourlyWeatherItem time={hour[0]} temp={hour[1]} key={index} />;
+  });
 
   // Updates weather for every hour
   useEffect(() => {
@@ -25,9 +31,8 @@ function HourlyWeather({ data }) {
   }, [data]);
 
   return (
-    <div>
-      <h2>Hourly Temp</h2>
-      {hourlyTemp.map((hour) => `${hour[0]} ${hour[1]}° `)}
+    <div className="hw--container">
+      <div className="hw--innerContainer">{weatherList}</div>
     </div>
   );
 }
