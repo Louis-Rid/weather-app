@@ -17,7 +17,8 @@
   transform: scale(1.025);
 }
 
-.way--container h2 {
+.way--container h1 {
   margin: 0;
+  font-size: 1.5em;
   color: #f5f5f5;
 }

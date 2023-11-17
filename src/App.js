@@ -15,7 +15,7 @@ function App() {
     <div className="app">
       {!loading ? (
         <div>
-          <FindYourWeather setCoords={setLocation} setLoading={setLoading} />
+          <FindYourWeather setCoords={setLocation} updateLoading={setLoading} />
           <WeatherCard coords={location} curCity={cityName} />
           <Geocode coords={location} setCity={setCityName} />
         </div>

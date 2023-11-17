@@ -1,14 +1,14 @@
 import "./findYourWeather.css";
 
-function FindYourWeather({ setCoords, setLoading }) {
+function FindYourWeather({ setCoords, updateLoading }) {
   function geoFindMe() {
-    setLoading(true);
+    updateLoading(true);
 
     const success = (position) => {
       let lat = position.coords.latitude;
       let lng = position.coords.longitude;
       setCoords([lat, lng]);
-      setLoading(false);
+      updateLoading(false);
     };
 
     const error = (e) => {
@@ -22,7 +22,7 @@ function FindYourWeather({ setCoords, setLoading }) {
 
   return (
     <div className="way--container">
-      <h2>Find Your Weather</h2>
+      <h1>Find Your Weather</h1>
       <button onClick={geoFindMe}>Use my location</button>
     </div>
   );
