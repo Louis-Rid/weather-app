@@ -4,7 +4,7 @@ import "./index.css";
 
 import WeatherCard from "./components/WeatherCard/WeatherCard";
 import FindYourWeather from "./components/FindYourWeather/FindYourWeather";
-import Geocode from "./components/reverseGeocoding";
+import Geocode from "./components/Geocode";
 
 function App() {
   const [location, setLocation] = useState(["40.73", "-73.93"]);
@@ -21,7 +21,7 @@ function App() {
         </div>
       ) : (
         <div className="loaderWrapper">
-          <TailSpin />
+          <TailSpin title="loader" />
         </div>
       )}
     </div>

@@ -5,8 +5,8 @@ function WeeklyTempItem({ max, min, day }) {
     <div className="wti--container">
       <span>{day}</span>
       <span>
-        <span className="wti--max">{max}</span>/
-        <span className="wti--min">{min}</span>
+        <span className="wti--max">{max}˚</span>/
+        <span className="wti--min">{min}˚</span>
       </span>
     </div>
   );
