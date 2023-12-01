@@ -9,7 +9,7 @@ function WeatherCard({ coords, curCity }) {
 
   // Gathers Weather Data From API
   useEffect(() => {
-    var key = "c568bd89839442dcdacafd920438a959";
+    var key = "YOUR_API_KEY";
     var endpoint = `https://api.openweathermap.org/data/3.0/onecall?lat=${coords[0]}&lon=${coords[1]}&units=imperial&appid=${key}`;
 
     fetch(endpoint)
